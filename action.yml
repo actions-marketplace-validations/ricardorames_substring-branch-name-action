@@ -1,0 +1,16 @@
+name: 'Extract Branch Semantic Version'
+description: 'Extract a part of branch name that trigger the action given a suffix.'
+inputs:
+  branch-name:
+    description: 'Branch name'
+    required: true
+  suffix:
+    description: 'Suffix'
+    required: true
+    default: ''
+outputs:
+  semver:
+    description: 'The branch name without suffix'
+runs:
+  using: 'node12'
+  main: 'index.js'
