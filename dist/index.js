@@ -189,7 +189,7 @@ const core = __webpack_require__(310);
 const github = __webpack_require__(462);
 
 try {
-  const branchName = github.ref;
+  const branchName = github.context.payload.ref.replace('refs/heads/', '');
   const suffix = core.getInput('suffix');
   console.log(`Extract semantic version of branch name ${branchName} given suffix ${suffix}`);
   const semver = branchName.substring(suffix.length);
