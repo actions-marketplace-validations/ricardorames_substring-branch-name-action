@@ -9,7 +9,7 @@ This action requires the ```separator``` attribute of type ```string```. Example
 
 ## Output
 
-This action output the value in ```substring``` variable.
+This action output the value in ```value``` variable.
 
 ## Example
 
@@ -31,7 +31,7 @@ jobs:
           password: ${{secrets.DOCKER_REGISTRY_PASSWORD}}
           registry: your.registry.io
           repository: your-repository
-          tags: ${{steps.ext.outputs.substring}}
+          tags: ${{steps.substring.outputs.value}}
           tag_with_ref: false
           tag_with_sha: false
 
