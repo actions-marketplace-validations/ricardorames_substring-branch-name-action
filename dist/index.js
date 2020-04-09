@@ -190,11 +190,11 @@ const github = __webpack_require__(462);
 
 try {
   const branchName = github.context.payload.ref.replace('refs/heads/', '');
-  const suffix = core.getInput('suffix');
-  console.log(`Extract semantic version of branch name ${branchName} given suffix ${suffix}`);
-  const semver = branchName.substring(suffix.length);
-  core.setOutput("semver", semver);
-  console.log(`Extracted semantic version ${semver}`);
+  const separator = core.getInput('separator');
+  console.log(`Substring the branch name ${branchName} given the separator ${separator}`);
+  const branchNameSubstring = branchName.substring(separator.length);
+  core.setOutput("substring", branchNameSubstring);
+  console.log(`Branch name substring ${branchNameSubstring}`);
 } catch (error) {
   core.setFailed(error.message);
 }

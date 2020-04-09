@@ -1,16 +1,13 @@
-name: 'Extract Branch Semantic Version'
-description: 'Extract a part of branch name that trigger the action given a suffix.'
+name: 'Substring branch name after a separator'
+description: 'Substring the branch name (that trigger the action) after the first occurrence of a given separator.'
 inputs:
-  branch-name:
-    description: 'Branch name'
-    required: true
-  suffix:
-    description: 'Suffix'
+  separator:
+    description: 'Separator'
     required: true
     default: ''
 outputs:
-  semver:
-    description: 'The branch name without suffix'
+  substring:
+    description: 'The branch name substring.'
 runs:
   using: 'node12'
   main: 'dist/index.js'
