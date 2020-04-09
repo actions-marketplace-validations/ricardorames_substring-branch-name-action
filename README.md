@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Substring branch name
         id: substring
-        uses: ricardorames/subtring-branch-name-action@v0.2.0
+        uses: ricardorames/subtring-branch-name-action@v0.2.3
         with:
             separator: 'release-'
       - name: Build and push Docker images
