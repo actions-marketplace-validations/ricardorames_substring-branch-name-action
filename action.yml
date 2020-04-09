@@ -1,5 +1,7 @@
 name: 'Substring branch name after a separator'
 description: 'Substring the branch name (that trigger the action) after the first occurrence of a given separator.'
+icon: 'box'
+color: 'gray-dark'
 inputs:
   separator:
     description: 'Separator'
